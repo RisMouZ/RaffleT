@@ -1,3 +1,4 @@
-Welcome to the RaffleT github project.
+Welcome to the **RaffleT** github project.
+
 
 RaffleT is a marketplace 
