@@ -75,3 +75,34 @@
 .wallet-btn {
   margin-left: auto;
 }
+
+.navigation {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-active {
+  background-color: #454545;
+  color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.nav-active:hover {
+  background-color: #454545;
+  color: #f0f0f0;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+li {
+  list-style-type: none;
+}
+
+.nav-inactive:hover {
+  color: #454545;
+}
