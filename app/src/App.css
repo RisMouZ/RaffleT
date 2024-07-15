@@ -40,3 +40,38 @@
 .read-the-docs {
   color: #888;
 }
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f0f0f0;
+  padding: 10px;
+  z-index: 10;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 5rem;
+}
+
+.header-logo {
+  position: flex;
+  top: 10px;
+  left: 10px;
+  height: 2em;
+}
+
+.header-logo img {
+  height: 100%;
+}
+
+.wallet-btn {
+  margin-left: auto;
+}
