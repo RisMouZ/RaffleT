@@ -1,9 +1,8 @@
 use anchor_lang::prelude::*;
 // use rand::Rng;
 
-// This is your program's public key and it will update
-// automatically when you build the project.
-declare_id!("");
+
+declare_id!("93aVSKUUHf7Jyz7qMbK1qMgWG1ZMge1D3hoHtv7tdCJy");
 
 #[program]
 mod raffle_t {
@@ -60,12 +59,32 @@ mod raffle_t {
 
         buyer_account.buyer_address = _ctx.accounts.signer.key();
 
+        // Transfer the ticket price from the buyer to the raffle account
+        let lamports = raffle_account.ticket_price;
+        let cpi_ctx = CpiContext::new(
+            _ctx.program,
+            _ctx.accounts.to_account_info(),
+            _ctx.remaining_accounts,
+        );
+        let transfer_instruction = anchor_lang::solana_program::system_instruction::transfer(
+            &_ctx.accounts.signer.key(),
+            &raffle_account.key(),
+            lamports,
+        );
+        anchor_lang::solana_program::program::invoke(
+            &transfer_instruction,
+            &[
+                _ctx.accounts.signer.to_account_info(),
+                _ctx.accounts.raffle.to_account_info(),
+            ],
+        )?;
+
         raffle_account.tickets_count += 1;
 
         Ok(())
     }
 
-    pub fn draw(_ctx: Context<Draw>, max_tickets: u32) -> Result<()> {
+    pub fn draw(_ctx: Context<Draw>, _max_tickets: u32) -> Result<()> {
         // require!(
         //     _ctx.accounts.raffle.tickets_count >= _ctx.accounts.raffle.max_tickets,
         //     RaffleError::RaffleNotEnded
@@ -77,7 +96,7 @@ mod raffle_t {
 
         // let winner = xorshift_output % max_tickets;
 
-        // let winner = rand::thread_rng().gen_range(1..=max_tickets);
+        // let winner = rand::thread_rng().gen_range(1..=_max_tickets);
 
         // // msg!("Slot : {}", slot);
         // // msg!("Xorshift output : {}", xorshift_output);
@@ -138,8 +157,11 @@ pub struct Buy<'info> {
 
 #[derive(Accounts)]
 pub struct Draw<'info> {
-    // #[account(mut)]
-    // pub raffle: Account<'info, Raffle>,
+    // je voudrais récuperer les donner de la raffle pour pouvoir les utiliser dans la fonction draw
+    #[account(mut)]
+    pub raffle: Account<'info, Raffle>,
+    #[account(mut)]
+    pub buyer: Account<'info, Buyer>,
     #[account(mut)]
     pub signer: Signer<'info>,
     pub system_program: Program<'info, System>,

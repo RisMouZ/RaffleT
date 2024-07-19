@@ -7,11 +7,17 @@ skip-lint = false
 [programs.localnet]
 raffle_t = "93aVSKUUHf7Jyz7qMbK1qMgWG1ZMge1D3hoHtv7tdCJy"
 
+[programs.devnet]
+raffle_t = "93aVSKUUHf7Jyz7qMbK1qMgWG1ZMge1D3hoHtv7tdCJy"
+
+[programs.mainnet]
+raffle_t = "93aVSKUUHf7Jyz7qMbK1qMgWG1ZMge1D3hoHtv7tdCJy"
+
 [registry]
 url = "https://api.apr.dev"
 
 [provider]
-cluster = "Localnet"
+cluster = "devnet"
 wallet = "~/.config/solana/id.json"
 
 [scripts]
