@@ -5,7 +5,7 @@ use anchor_spl::token::Token;
 use anchor_spl::token::{self, Mint, TokenAccount, Transfer};
 // use spl_token::instruction::AuthorityType;
 
-declare_id!("J6XenUZ3JhSHcoj7gYDSzq5dre4fPGEJfeSZ45Vd1vwk");
+declare_id!("93aVSKUUHf7Jyz7qMbK1qMgWG1ZMge1D3hoHtv7tdCJy");
 
 #[program]
 mod raffle_t {
@@ -24,7 +24,7 @@ mod raffle_t {
 
     pub fn create_raffle(
         _ctx: Context<CreateRaffle>,
-        // nft_id: Pubkey,
+        nft_address: Pubkey,
         max_tickets: u32,
         tickets_price: u32,
         end_with_deadline: bool,
@@ -52,7 +52,7 @@ mod raffle_t {
 
         raffle_account.seller = _ctx.accounts.signer.key();
         raffle_account.raffle_number = user_account.raffle_count;
-        // raffle_account.nft_id = nft_id;
+        raffle_account.nft_address = nft_address;
         raffle_account.ticket_price = tickets_price;
         raffle_account.end_with_deadline = end_with_deadline;
 
@@ -213,6 +213,28 @@ mod raffle_t {
 
         Ok(())
     }
+
+    pub fn withdraw_nft(_ctx: Context<WithdrawNft>) -> Result<()> {
+        require!(
+            _ctx.accounts.buyer.buyer_address == _ctx.accounts.signer.key(),
+            RaffleError::NotTheWinner
+        );
+        require!(
+            _ctx.accounts.raffle.raffle_in_progress == false,
+            RaffleError::RaffleNotFinished
+        );
+
+        let cpi_accounts = Transfer {
+            from: _ctx.accounts.raffle_token_account.to_account_info(),
+            to: _ctx.accounts.signer_token_account.to_account_info(),
+            authority: _ctx.accounts.raffle.to_account_info(),
+        };
+        let cpi_program = _ctx.accounts.token_program.to_account_info();
+        let cpi_ctx = CpiContext::new(cpi_program, cpi_accounts);
+        token::transfer(cpi_ctx, 1)?;
+
+        Ok(())
+    }
 }
 
 #[derive(Accounts)]
@@ -297,13 +319,30 @@ pub struct WithdrawSol<'info> {
     pub signer: Signer<'info>,
     pub system_program: Program<'info, System>,
 }
+
 #[derive(Accounts)]
-pub struct WithdrawNFT<'info> {
+pub struct WithdrawNft<'info> {
+    #[account(mut)]
+    pub signer: Signer<'info>,
+    pub buyer: Account<'info, Buyer>,
     #[account(mut)]
     pub raffle: Account<'info, Raffle>,
     #[account(mut)]
-    pub signer: Signer<'info>,
+    pub raffle_token_account: Account<'info, TokenAccount>,
+    pub nft_mint: Account<'info, Mint>,
+    #[account(mut)]
+    pub user: Account<'info, User>,
+    #[account(
+        init_if_needed,
+        payer = signer,
+        associated_token::mint = nft_mint,
+        associated_token::authority = signer,
+    )]
+    pub signer_token_account: Account<'info, TokenAccount>,
     pub system_program: Program<'info, System>,
+    pub token_program: Program<'info, Token>,
+    pub rent: Sysvar<'info, Rent>,
+    pub associated_token_program: Program<'info, AssociatedToken>,
 }
 
 #[account]
@@ -316,7 +355,7 @@ pub struct User {
 pub struct Raffle {
     seller: Pubkey,
     raffle_number: u32,
-    nft_id: Pubkey, //ou u32 ? Il faut regarder la struct d'un nft voir les infos necaissaires
+    nft_address: Pubkey,
     max_tickets: u32,
     ticket_price: u32,
     end_with_deadline: bool,
@@ -349,6 +388,8 @@ pub enum RaffleError {
     RaffleEnded,
     #[msg("The deadline is not correct")]
     DeadlineNotCorrect,
+    #[msg("You're not the winner")]
+    NotTheWinner,
 }
 
 pub fn xorshift64(seed: u64) -> u64 {
