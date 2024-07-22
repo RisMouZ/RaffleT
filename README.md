@@ -53,9 +53,9 @@ RaffleT revolutionizes the traditional raffle concept by utilizing Solana blockc
 3. Publish your raffle and monitor participation in real-time.
 
 ## Team
-Xavier B
-Paul-Louis C
-Jonathan R
+- Xavier B "The Designer"
+- Paul-Louis C "The Engineer"
+- Jonathan R "The Conductor"
 
 ---
 
