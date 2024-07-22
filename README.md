@@ -20,7 +20,7 @@ RaffleT revolutionizes the traditional raffle concept by utilizing Solana blockc
 **How it work ?**
 
 <p align="center">
-  <img src="https://github.com/RisMouZ/RaffleT/blob/main/images/excalidraw_mecanism_no%20back.png" alt="RaffleT Logo">
+  <img src="https://github.com/RisMouZ/RaffleT/blob/main/images/excalidraw_mecanism.png" alt="RaffleT Logo">
 </p>
 
 ## Usage
