@@ -1,5 +1,7 @@
 # RaffleT
 
+![RaffleT Logo](https://github.com/RisMouZ/RaffleT/blob/main/images/Rafflet_logo.png)
+
 Welcome to **RaffleT**, the first raffle marketplace on Solana. RaffleT allows users to participate in secure and transparent raffles through the Solana blockchain.
 
 ## Description
