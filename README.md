@@ -17,6 +17,12 @@ RaffleT revolutionizes the traditional raffle concept by utilizing Solana blockc
 - **Security:** Smart contracts are used to guarantee fair draws.
 - **Ease of Use:** Intuitive interface for purchasing tickets and participating in raffles.
 
+**How it work ?**
+
+<p align="center">
+  <img src="https://github.com/RisMouZ/RaffleT/blob/main/images/excalidraw_mecanism.png" alt="RaffleT Logo">
+</p>
+
 ## Usage
 
 ### Participating in a Raffle
