@@ -68,7 +68,7 @@ The user chooses the number of raffle tickets they want to put up for sale. The 
 3. Publish your raffle and monitor participation in real-time.
 
 <p align="center">
-  <img src="https://github.com/RisMouZ/RaffleT/blob/main/images/transfert_sombre.png" alt="transfert" width="300" height="300">
+  <img src="https://github.com/RisMouZ/RaffleT/blob/main/images/transfert_sombre.png" alt="transfert" width="300" height="500">
 </p>
 
 ## Team
