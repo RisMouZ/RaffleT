@@ -28,6 +28,15 @@ RaffleT revolutionizes the traditional raffle concept by utilizing Solana blockc
   - rustc
   - cargo
 + Anchor
++ Solana playground
++ Dependances
+  - coral-xyz
+  - project-serum
+  - solana/web3.js
+  - bn.js
+  - chai
+  - mocha
++ Next JS
 + Node JS
   - npm
   - yarn
