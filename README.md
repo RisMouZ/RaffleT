@@ -26,7 +26,7 @@ The user chooses the number of raffle tickets they want to put up for sale. The 
 **How it work ?**
 
 <p align="center">
-  <img src="https://github.com/RisMouZ/RaffleT/blob/main/images/excalidraw_mecanism.png" alt="RaffleT Logo">
+  <img src="https://github.com/RisMouZ/RaffleT/blob/main/images/mecanism_sombre.png" alt="mecanism">
 </p>
 
 **How we do it ?**
@@ -66,6 +66,10 @@ The user chooses the number of raffle tickets they want to put up for sale. The 
 1. Connect your Solana wallet to the platform.
 2. Click on "Create a Raffle" and fill in the required details (name, description, number of tickets, price, etc.).
 3. Publish your raffle and monitor participation in real-time.
+
+<p align="center">
+  <img src="https://github.com/RisMouZ/RaffleT/blob/main/images/transfert_sombre.png" alt="transfert">
+</p>
 
 ## Team
 - Xavier B "The Designer"
