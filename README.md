@@ -8,8 +8,11 @@ Welcome to **RaffleT**, the first raffle marketplace on Solana. RaffleT allows u
 
 ## Description
 
-RaffleT is a raffle marketplace where users can place bids. The user chooses the number of raffle tickets they want to put up for sale. The winner is randomly selected once all the tickets are sold.
-
+RaffleT is a raffle marketplace where users can place bids. 
+The user chooses the number of raffle tickets they want to put up for sale. The winner is randomly selected once all the tickets are sold.
+<p align="center">
+<iframe src="https://giphy.com/embed/2dgL47e8NwHT5aiLI3" width="480" height="480" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/BrandFire-yes-hype-adamthecreator-2dgL47e8NwHT5aiLI3">via GIPHY</a></p>
+</p>
 ## Features
 
 - **Raffle Marketplace:** Buy and sell NFT using Solana.
