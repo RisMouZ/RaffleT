@@ -1,12 +1,14 @@
 # RaffleT
 
-![RaffleT Logo](https://github.com/RisMouZ/RaffleT/blob/main/images/Rafflet_logo.png)
+<p align="center">
+  <img src="https://github.com/RisMouZ/RaffleT/blob/main/images/Rafflet_logo_no_back.png" alt="RaffleT Logo">
+</p>
 
 Welcome to **RaffleT**, the first raffle marketplace on Solana. RaffleT allows users to participate in secure and transparent raffles through the Solana blockchain.
 
 ## Description
 
-RaffleT revolutionizes the traditional raffle concept by utilizing SOLANA blockchain to ensure transparency and fairness.
+RaffleT revolutionizes the traditional raffle concept by utilizing Solana blockchain to ensure transparency and fairness.
 
 ## Features
 
@@ -21,13 +23,13 @@ RaffleT revolutionizes the traditional raffle concept by utilizing SOLANA blockc
 
 1. Connect your Solana wallet to the platform.
 2. Browse the available raffles and select the one you want to participate in.
-3. Purchase tickets using your Solana wallet.
+3. Put a bid using your Solana wallet.
 4. Follow the live draw or check the results once the draw is completed.
 
 ### Creating a Raffle
 
 1. Connect your Solana wallet to the platform.
-2. Click on "Create a Raffle" and fill in the required details (name, description, number of tickets, price, draw date, etc.).
+2. Click on "Create a Raffle" and fill in the required details (name, description, number of tickets, price, etc.).
 3. Publish your raffle and monitor participation in real-time.
 
 ---
