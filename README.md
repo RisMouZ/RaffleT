@@ -12,7 +12,7 @@ RaffleT is a raffle marketplace where users can place bids.
 The user chooses the number of raffle tickets they want to put up for sale. The winner is randomly selected once all the tickets are sold.
 
 <p align="center">
-  <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnJvcWZuODN1d3JraGc0bDRlb3U1d3B0cmxqM3p5NzFmd21uMTNqYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2dgL47e8NwHT5aiLI3/giphy.gif" alt="Funny GIF">
+  <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnJvcWZuODN1d3JraGc0bDRlb3U1d3B0cmxqM3p5NzFmd21uMTNqYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2dgL47e8NwHT5aiLI3/giphy.gif" alt="Funny GIF" width="200" height="200">
 </p>
 
 
