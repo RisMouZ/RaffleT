@@ -52,5 +52,10 @@ RaffleT revolutionizes the traditional raffle concept by utilizing Solana blockc
 2. Click on "Create a Raffle" and fill in the required details (name, description, number of tickets, price, etc.).
 3. Publish your raffle and monitor participation in real-time.
 
+## Team
+Xavier B
+Paul-Louis C
+Jonathan R
+
 ---
 
