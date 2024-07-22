@@ -23,6 +23,13 @@ RaffleT revolutionizes the traditional raffle concept by utilizing Solana blockc
   <img src="https://github.com/RisMouZ/RaffleT/blob/main/images/excalidraw_mecanism.png" alt="RaffleT Logo">
 </p>
 
+**How we do it ?**
++ Rust
++ Anchor
++ React
++ HTML
++ CSS
+
 ## Usage
 
 ### Participating in a Raffle
