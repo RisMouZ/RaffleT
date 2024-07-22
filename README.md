@@ -25,10 +25,17 @@ RaffleT revolutionizes the traditional raffle concept by utilizing Solana blockc
 
 **How we do it ?**
 + Rust
+  - rustc
+  - cargo
 + Anchor
-+ React
++ Node JS
+  - npm
+  - yarn
 + HTML
 + CSS
++ Vercel
++ Discord
++ Notion
 
 ## Usage
 
