@@ -8,7 +8,7 @@ Welcome to **RaffleT**, the first raffle marketplace on Solana. RaffleT allows u
 
 ## Description
 
-RaffleT revolutionizes the traditional raffle concept by utilizing Solana blockchain to ensure transparency and fairness.
+RaffleT is a raffle marketplace where users can place bids. The user chooses the number of raffle tickets they want to put up for sale. The winner is randomly selected once all the tickets are sold.
 
 ## Features
 
