@@ -3,7 +3,6 @@ import { Connection } from "@solana/web3.js";
 // import type { Options } from "@nfteyez/sol-rayz";
 import { publicKey } from "@coral-xyz/anchor/dist/cjs/utils";
 import { useConnection, useWallet } from "@solana/wallet-adapter-react";
-import { use } from "chai";
 
 const NFT = () => {
     const { connection } = useConnection();
@@ -12,11 +11,10 @@ const NFT = () => {
 
     const { nfts, isLoading, error } = useWalletNfts({
         publicAddress: publicKey?.toBase58() ?? "",
-        // pass your connection object to use specific RPC node
         connection,
     });
 
-    console.log(nfts);
+    console.log(nfts?.length);
 
     if (error) return <div>Have some error</div>;
     if (isLoading) return <div>Loading...</div>;

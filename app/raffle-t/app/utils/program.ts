@@ -1,9 +1,9 @@
-import { AnchorProvider, Program, Idl } from "@project-serum/anchor";
-import { PublicKey, Connection } from "@solana/web3.js";
+import { AnchorProvider, Idl } from "@project-serum/anchor";
+import { PublicKey, Connection, clusterApiUrl } from "@solana/web3.js";
 
-import IDL from "../../../../target/idl/raffle_t.json";
 import { PROGRAM_ID } from "./constants";
-import { Wallet } from "@project-serum/anchor/dist/cjs/provider";
+import { publicKey } from "@project-serum/anchor/dist/cjs/utils";
+import { IdlAccounts, Program } from "@coral-xyz/anchor";
 
 export const getProgram = (connection: any, wallet: any) => {
     const provider = new AnchorProvider(connection, wallet, {
@@ -14,14 +14,18 @@ export const getProgram = (connection: any, wallet: any) => {
     return program;
 };
 
-// export const getVoterAddress = async (
-//     votePublicKey: PublicKey,
-//     userPublicKey: PublicKey
-// ): Promise<PublicKey> => {
-//     return (
-//         await PublicKey.findProgramAddress(
-//             [votePublicKey.toBuffer(), userPublicKey.toBuffer()],
-//             PROGRAM_ID
-//         )
-//     )[0];
-// };
+export const getUserAddress = async (userPublicKey: PublicKey): Promise<PublicKey> => {
+    return (await PublicKey.findProgramAddress([userPublicKey.toBuffer()], PROGRAM_ID))[0];
+};
+
+export const getVoterAddress = async (
+    votePublicKey: PublicKey,
+    userPublicKey: PublicKey
+): Promise<PublicKey> => {
+    return (
+        await PublicKey.findProgramAddress(
+            [votePublicKey.toBuffer(), userPublicKey.toBuffer()],
+            PROGRAM_ID
+        )
+    )[0];
+};

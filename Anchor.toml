@@ -5,13 +5,13 @@ resolution = true
 skip-lint = false
 
 [programs.localnet]
-raffle_t = "93aVSKUUHf7Jyz7qMbK1qMgWG1ZMge1D3hoHtv7tdCJy"
+raffle_t = "CKt7TmvijVPm7xgGPBXXDnemzjnaNHAiXPAKWDxpYQmV"
 
 [programs.devnet]
-raffle_t = "93aVSKUUHf7Jyz7qMbK1qMgWG1ZMge1D3hoHtv7tdCJy"
+raffle_t = "CKt7TmvijVPm7xgGPBXXDnemzjnaNHAiXPAKWDxpYQmV"
 
 [programs.mainnet]
-raffle_t = "93aVSKUUHf7Jyz7qMbK1qMgWG1ZMge1D3hoHtv7tdCJy"
+raffle_t = "CKt7TmvijVPm7xgGPBXXDnemzjnaNHAiXPAKWDxpYQmV"
 
 [registry]
 url = "https://api.apr.dev"

@@ -5,7 +5,7 @@ use anchor_spl::token::Token;
 use anchor_spl::token::{self, Mint, TokenAccount, Transfer};
 // use spl_token::instruction::AuthorityType;
 
-declare_id!("93aVSKUUHf7Jyz7qMbK1qMgWG1ZMge1D3hoHtv7tdCJy");
+declare_id!("CKt7TmvijVPm7xgGPBXXDnemzjnaNHAiXPAKWDxpYQmV");
 
 #[program]
 mod raffle_t {
