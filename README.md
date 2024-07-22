@@ -73,7 +73,7 @@ The user chooses the number of raffle tickets they want to put up for sale. The 
 - Jonathan R "The Conductor"
 
 <p align="center">
-  <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExamR0ZXJ3OHY3bmRra29vZXUxMnlvY3FtanZudDZ4Nm93YXJxbjZvNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/UyWXNumwNvXmE/giphy.gif" alt="Team GIF" width="200" height="200">
+  <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGxzc2ZndjU0NDdpdWtnb3lqMXVoYjByMDdidjgwMWo4dXY4OTR2dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/13kajTax0GCg0g/giphy.gif" alt="Team GIF" width="200" height="200">
 </p>
 ---
 
